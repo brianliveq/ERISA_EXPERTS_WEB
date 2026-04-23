@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — ERISA Experts</title>
+  <meta name="description" content="ERISA insights, fiduciary guidance, and retirement plan governance commentary from the team at ERISA Experts." />
+  <link rel="canonical" href="https://www.erisaexpertsinc.com/blog.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.erisaexpertsinc.com/blog.html" />
+  <meta property="og:title" content="Blog — ERISA Experts" />
+  <meta property="og:description" content="ERISA insights, fiduciary guidance, and retirement plan governance commentary from attorneys with 20–30+ years of experience." />
+  <meta property="og:image" content="https://www.erisaexpertsinc.com/ee-logo.png" />
+  <meta property="og:site_name" content="ERISA Experts Inc." />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — ERISA Experts" />
+  <meta name="twitter:description" content="ERISA insights, fiduciary guidance, and retirement plan governance commentary." />
+  <meta name="twitter:image" content="https://www.erisaexpertsinc.com/ee-logo.png" />
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://www.erisaexpertsinc.com/blog.html",
+        "url": "https://www.erisaexpertsinc.com/blog.html",
+        "name": "ERISA Experts Blog",
+        "description": "ERISA insights, fiduciary guidance, and retirement plan governance commentary.",
+        "publisher": { "@id": "https://www.erisaexpertsinc.com/#organization" },
+        "isPartOf": { "@id": "https://www.erisaexpertsinc.com/#website" },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Why 'We Have an Advisor' Is No Longer Enough",
+            "author": { "@id": "https://www.erisaexpertsinc.com/about.html#jewell" },
+            "datePublished": "2026-03-01",
+            "publisher": { "@id": "https://www.erisaexpertsinc.com/#organization" },
+            "keywords": ["ERISA", "fiduciary liability", "independent fiduciary", "plan sponsor"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The Five Most Common ERISA Violations Plan Sponsors Make",
+            "author": { "@id": "https://www.erisaexpertsinc.com/about.html#jewell" },
+            "datePublished": "2026-02-01",
+            "publisher": { "@id": "https://www.erisaexpertsinc.com/#organization" },
+            "keywords": ["ERISA violations", "plan sponsor compliance", "retirement plan"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "What an Investment Policy Statement Actually Needs to Say",
+            "author": { "@id": "https://www.erisaexpertsinc.com/about.html#sarah" },
+            "datePublished": "2026-01-01",
+            "publisher": { "@id": "https://www.erisaexpertsinc.com/#organization" },
+            "keywords": ["IPS", "investment policy statement", "ERISA governance"]
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "ERISA Class Actions: What's Driving the Surge in 2025–2026",
+            "author": { "@id": "https://www.erisaexpertsinc.com/about.html#michael" },
+            "datePublished": "2025-12-01",
+            "publisher": { "@id": "https://www.erisaexpertsinc.com/#organization" },
+            "keywords": ["ERISA litigation", "class action", "fiduciary breach"]
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .blog-card {
+      background: var(--c-bg-panel);
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color var(--dur-mid), box-shadow var(--dur-mid);
+    }
+    .blog-card:hover {
+      border-color: var(--c-border-mid);
+      box-shadow: 0 8px 32px -8px rgba(0,0,0,0.12);
+    }
+    .blog-card-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-gold);
+    }
+    .blog-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      line-height: 1.35;
+      color: var(--c-text);
+    }
+    .blog-card-excerpt {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--c-text-mid);
+      flex: 1;
+    }
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--c-text-dim);
+      padding-top: 1rem;
+      border-top: 1px solid var(--c-border);
+    }
+    .blog-card-meta-dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--c-text-dim);
+    }
+    .blog-card-read {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--c-gold);
+      margin-top: 0.25rem;
+      transition: gap var(--dur-fast);
+    }
+    .blog-card-read:hover { gap: 0.65rem; }
+    .blog-featured {
+      background: var(--c-bg-panel);
+      border: 1px solid var(--c-border-mid);
+      border-radius: 12px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .blog-featured-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-gold);
+      margin-bottom: 0.75rem;
+    }
+    .blog-featured-title {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      line-height: 1.3;
+      color: var(--c-text);
+      margin-bottom: 1rem;
+    }
+    .blog-featured-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--c-text-mid);
+      margin-bottom: 1.5rem;
+    }
+    .blog-featured-visual {
+      background: var(--c-bg-soft);
+      border-radius: 8px;
+      border: 1px solid var(--c-border);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blog-featured-visual-inner {
+      text-align: center;
+      color: var(--c-text-dim);
+    }
+    .blog-featured-visual-inner svg {
+      display: block;
+      margin: 0 auto 0.75rem;
+      opacity: 0.4;
+    }
+    .blog-featured-visual-inner span {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 700px) {
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="ERISA Experts home">
+        <img src="ee-logo.png" alt="ERISA Experts" class="nav-logo-img" />
+      </a>
+      <div class="nav-taglines">
+        <span class="nav-tagline-main">We Don't Advise the Fiduciary. We Become It.</span>
+        <span class="nav-tagline-phone">CALL US &nbsp;239 326 0351</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#problem" class="nav-link">The Problem</a></li>
+        <li><a href="index.html#solution" class="nav-link">Our Approach</a></li>
+        <li><a href="index.html#difference" class="nav-link">Why Us</a></li>
+        <li><a href="index.html#clients" class="nav-link">Clients</a></li>
+        <li class="nav-item--dropdown">
+          <a href="about.html" class="nav-link nav-link--dropdown">About Us <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="about.html#jewell-esposito" class="nav-dropdown-link">Jewell Lim Esposito</a></li>
+            <li><a href="about.html#sarah-ivy" class="nav-dropdown-link">Sarah Ivy</a></li>
+            <li><a href="about.html#michael-khalil" class="nav-dropdown-link">Michael Khalil</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html" class="nav-link nav-link--active">Blog</a></li>
+      </ul>
+      <a href="index.html#cta" class="btn-primary btn-sm" aria-label="Schedule a fiduciary risk review">Schedule a Review</a>
+      <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="index.html#problem" class="mobile-link">The Problem</a>
+      <a href="index.html#solution" class="mobile-link">Our Approach</a>
+      <a href="index.html#difference" class="mobile-link">Why Us</a>
+      <a href="index.html#clients" class="mobile-link">Clients</a>
+      <a href="about.html" class="mobile-link">About Us</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="index.html#cta" class="btn-primary mobile-cta">Schedule a Review</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-tag">Insights &amp; Commentary</div>
+        <h1 class="page-hero-heading">The ERISA Experts <em class="headline-accent">Blog</em></h1>
+        <p class="page-hero-sub">Fiduciary guidance, ERISA compliance updates, and governance commentary — written for plan sponsors, HR leaders, and CFOs who want to stay ahead of their exposure.</p>
+      </div>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="section section--problem">
+      <div class="container">
+        <div class="section-tag">Featured Article</div>
+        <div class="blog-featured">
+          <div class="blog-featured-text">
+            <div class="blog-featured-label">Fiduciary Liability</div>
+            <h2 class="blog-featured-title">Why "We Have an Advisor" Is No Longer Enough</h2>
+            <p class="blog-featured-excerpt">
+              Plan sponsors routinely assume that hiring a financial advisor transfers fiduciary exposure. It doesn't. Unless your advisor has formally accepted fiduciary status in writing — and carries the liability that comes with it — you remain on the hook. Here's what the law actually requires.
+            </p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>March 2026</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>6 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read" style="margin-top:1.25rem;">
+              Contact us to discuss
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="blog-featured-visual">
+            <div class="blog-featured-visual-inner">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M24 6L6 16v16l18 10 18-10V16L24 6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M24 6v36M6 16l18 10 18-10" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>Featured Article</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="section section--solution">
+      <div class="container">
+        <div class="section-tag">Recent Articles</div>
+        <div class="blog-grid">
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Compliance</div>
+            <h3 class="blog-card-title">The Five Most Common ERISA Violations Plan Sponsors Make</h3>
+            <p class="blog-card-excerpt">From inadequate fee disclosure to imprudent investment selection, these are the missteps regulators flag most often — and how to avoid them.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>February 2026</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>5 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Governance</div>
+            <h3 class="blog-card-title">What an Investment Policy Statement Actually Needs to Say</h3>
+            <p class="blog-card-excerpt">Most IPS documents look thorough but fail under scrutiny. We break down what language holds up in litigation and what creates more exposure than it removes.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>January 2026</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>7 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Litigation Trends</div>
+            <h3 class="blog-card-title">ERISA Class Actions: What's Driving the Surge in 2025–2026</h3>
+            <p class="blog-card-excerpt">Plaintiffs' attorneys have refined their playbook. Understanding the patterns behind recent class actions is the first step toward building a defensible plan.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>December 2025</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>8 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Plan Design</div>
+            <h3 class="blog-card-title">SECURE 2.0 and What It Means for Your Fiduciary Duties</h3>
+            <p class="blog-card-excerpt">The SECURE 2.0 Act introduced new requirements around automatic enrollment, catch-up contributions, and more. Here's the fiduciary checklist every sponsor should review.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>November 2025</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>6 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Fee Benchmarking</div>
+            <h3 class="blog-card-title">Are You Paying Too Much? How to Benchmark Your Plan Fees</h3>
+            <p class="blog-card-excerpt">Fee reasonableness is a core fiduciary obligation. We walk through the benchmarking process — what to compare, where to find data, and how to document your findings.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>October 2025</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>5 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-tag">Independent Fiduciary</div>
+            <h3 class="blog-card-title">What Is an Independent Fiduciary — and Do You Need One?</h3>
+            <p class="blog-card-excerpt">The term gets used loosely. We explain what independent fiduciary status actually means under ERISA, when it's required, and how to evaluate whether your current provider qualifies.</p>
+            <div class="blog-card-meta">
+              <span>ERISA Experts Team</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>September 2025</span>
+              <span class="blog-card-meta-dot"></span>
+              <span>6 min read</span>
+            </div>
+            <a href="index.html#cta" class="blog-card-read">
+              Get in touch
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-block">
+          <div class="cta-bg-line" aria-hidden="true"></div>
+          <div class="section-tag cta-tag">Have a Question?</div>
+          <h2 class="cta-heading">Talk to a fiduciary expert directly.</h2>
+          <p class="cta-sub">Our team answers questions about ERISA exposure, governance structure, and what independent fiduciary engagement actually looks like for your plan.</p>
+          <a href="mailto:info@erisaexperts.com?subject=Blog%20Inquiry" class="btn-primary btn-xl">
+            Contact Us
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <p class="cta-note">No obligation. Strictly confidential.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-link" aria-label="ERISA Experts home">
+          <img src="ee-logo.png" alt="ERISA Experts" class="footer-logo-img" />
+          <span class="footer-logo-text">ERISA Experts</span>
+        </a>
+        <p class="footer-tagline">Trusted Independent Fiduciary</p>
+        <address class="footer-contact">
+          <span>ERISA Experts Inc.</span>
+          <span>15275 Collier Blvd, Suite 201233</span>
+          <span>Naples, FL &nbsp;34119</span>
+          <span>239-326-0351</span>
+          <a href="mailto:info@erisaexpertsinc.com">info@erisaexpertsinc.com</a>
+        </address>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html#problem">The Problem</a>
+        <a href="index.html#solution">Our Approach</a>
+        <a href="index.html#difference">Why Us</a>
+        <a href="index.html#clients">Clients</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#cta">Contact</a>
+      </nav>
+      <div class="footer-legal">
+        <p>&copy; 2026 ERISA Experts. All rights reserved.</p>
+        <p class="footer-disclaimer">ERISA Experts is an independent fiduciary firm. Nothing on this site constitutes legal advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
