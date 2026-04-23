@@ -938,6 +938,9 @@ ul { list-style: none; }
   object-position: center top;
   display: block;
 }
+.founder-photo-wrap--square {
+  border-radius: 8px;
+}
 .founder-name {
   font-family: var(--font-serif);
   font-size: 1.75rem;
@@ -1296,4 +1299,138 @@ ul { list-style: none; }
   .diff-row { grid-template-columns: 1fr 1fr; }
   .diff-cell--label { display: none; }
   .solution-pillars { border-radius: 0; border-left: none; border-right: none; }
+}
+
+/* ── HUB PAGE — Independent Fiduciary ───────────────── */
+.hub-risk-list {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-left: 0;
+  list-style: none;
+}
+.hub-risk-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  font-size: 1.0625rem;
+  color: var(--c-text-mid);
+  line-height: 1.6;
+}
+.hub-risk-list li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-gold);
+  flex-shrink: 0;
+  margin-top: 0.45em;
+}
+
+/* Articles grid */
+.section--articles { background: var(--c-bg-soft); }
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.article-card {
+  display: block;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition:
+    transform var(--dur-fast) var(--ease-spring),
+    box-shadow var(--dur-mid) var(--ease-out-expo),
+    border-color var(--dur-fast);
+  color: inherit;
+}
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.09);
+  border-color: var(--c-gold);
+}
+.article-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+.article-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+.article-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.45;
+  flex: 1;
+}
+.article-arrow {
+  font-size: 1.1rem;
+  color: var(--c-gold);
+  margin-top: auto;
+  transition: transform var(--dur-fast) var(--ease-spring);
+}
+.article-card:hover .article-arrow { transform: translateX(4px); }
+
+/* Resources grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.resource-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: inherit;
+  transition:
+    transform var(--dur-fast) var(--ease-spring),
+    box-shadow var(--dur-mid) var(--ease-out-expo),
+    border-color var(--dur-fast);
+}
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border-color: var(--c-gold);
+}
+.resource-icon {
+  color: var(--c-gold);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.resource-title {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+.resource-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-gold);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1024px) {
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .articles-grid { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr; }
 }
